@@ -1,0 +1,28 @@
+/*
+Given three values - Start Fahrenheit Value (S), End Fahrenheit value (E) and Step Size (W),
+you need to convert all Fahrenheit values from Start to End at the gap of W, into their
+corresponding Celsius values and print the table.
+*/
+
+#include<iostream>
+using namespace std;
+
+void fahrntocelsius(int start,int end,int gap){
+	int c;
+	while(start<=end){
+		c=(5*(start-32))/9;
+		cout<<c<<endl;
+		start=start+gap;
+	}
+}
+
+int main(){
+	int start,end,gap;
+	cout<<"Enter the start value"<<endl;
+	cin>>start;
+	cout<<"Enter the end value"<<endl;
+	cin>>end;
+	cout<<"Enter the gap value"<<endl;
+	cin>>gap;
+	fahrntocelsius(start,end,gap);
+}
